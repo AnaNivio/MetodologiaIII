@@ -1,14 +1,19 @@
 class Client:
-    def __init__(self,name,age,email):
-        self._name=name
-        self._age=age
-        self._email=email
+    def __init__(self, name: str, age: int, email: str):
+        if self.validate_email():
+            self._name = name
+            self._age = age
+            self._email = email
+        else:
+            print("Email invalid. Doesn't have")
+
     
     def to_string(self):
-        print ("Name: "+self._name+
-        "\n Age: "+self._age+"\n Email: "+self._email)
+        return "Name: " + str(self._name) + "\nAge: " + str(self._age) + "\nEmail: " + str(self._email)
  
     def validate_email(self):
-        if self._name.find('@') < 0 :
-            print ("Email doesn't have an @")
-        
+        if self._name.find('@') < 0:
+            return False
+        else:
+            return True
+
