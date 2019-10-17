@@ -4,11 +4,11 @@ class Client:
         self._age=age
         self._email=email
     
-    def to_string()
+    def to_string(self):
         print ("Name: "+self._name+
         "\n Age: "+self._age+"\n Email: "+self._email)
  
-    def validate_email(self)
-        if self._name.find(@) < 0 :
-            print "Email doesn't have an @"
+    def validate_email(self):
+        if self._name.find('@') < 0 :
+            print ("Email doesn't have an @")
         
